@@ -1,18 +1,20 @@
-import { useEffect } from 'react'
+import { useEffect } from "react";
 
 const Item = (props) => {
-
   return (
     <>
-      <div id="itemDiv" onClick={() => {
-        props.setViewingItem(props.item)
-      }}>
+      <div
+        id="itemDiv"
+        onClick={() => {
+          props.setViewingItem(props.item);
+        }}
+      >
         <p>
           {props.item.name +
             " " +
             props.item.color +
             "      " +
-            "type: " +
+            "Type: " +
             props.item.clothing_type}
         </p>
       </div>

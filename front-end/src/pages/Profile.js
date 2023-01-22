@@ -90,9 +90,6 @@ const Profile = () => {
           <div ref={addPopup} id="mainDiv2">
             <form>
               <div className="form__group field">
-                {/* <label htmlFor="name" className="form__label">
-                  Name:
-                </label> */}
                 <input
                   type="text"
                   placeholder="Name"
@@ -103,23 +100,7 @@ const Profile = () => {
                   }}
                 ></input>
               </div>
-
               <div className="form__group field">
-                <select
-                  className="form__field"
-                  placeholder="Clothing Type"
-                  onChange={(e) => {
-                    setNewVar({ ...newVar, clothing_type: e.target.value });
-                  }}
-                >
-                  <option value="top">top</option>
-                  <option value="bottom">bottom</option>
-                  <option value="shoes">shoes</option>
-                </select>
-              </div>
-
-              <div className="form__group field">
-                {/* <label htmlFor="color">Color:</label> */}
                 <input
                   type="text"
                   placeholder="Color"
@@ -130,15 +111,31 @@ const Profile = () => {
                   }}
                 ></input>
               </div>
+              <div className="form__group field">
+                <label htmlFor="clothingType">Type:</label>
+                <select
+                  className="form__field"
+                  id="clothingType"
+                  onChange={(e) => {
+                    setNewVar({ ...newVar, clothing_type: e.target.value });
+                  }}
+                >
+                  <option value="top">Top</option>
+                  <option value="bottom">Bottom</option>
+                  <option value="shoes">Shoes</option>
+                </select>
+              </div>
               <button
                 id="submitButton"
                 onClick={async () => {
-                  const abc = await axios.post(backendURL + "create/", {
+                  await axios.post(backendURL + "create/", {
                     clothing: newVar,
                   });
                   getAllItems();
                 }}
-              ></button>
+              >
+                Submit
+              </button>
             </form>
           </div>
         </div>
