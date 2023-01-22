@@ -28,7 +28,6 @@
 #right {
     border-top-right-radius: 10px;
     border-bottom-right-radius: 10px;
-    justify-content: center;
 }
 
 #left, #middle {
@@ -143,42 +142,24 @@
     cursor: pointer;
 }
 
+.typeGroups {
+    width: 2em;
+}
+
 #singleItemDiv {
     color:white;
+    height: fit-content;
 }
 
-.top {
-    padding-top: 50%;
-    padding-bottom: 50%;
-    color: white;
-    cursor: pointer;
-    user-select: none;
-    text-align: center;
-    font-family: 'Raleway', sans-serif;
-    margin: auto;
+.setOutfitDiv {
+    z-index: 10;
+    width: fit-content;
 }
 
-.bottom {
-    padding-top: 50%;
-    padding-bottom: 50%;
-    color: white;
-    cursor: pointer;
-    user-select: none;
-    text-align: center;
-    font-family: 'Raleway', sans-serif;
-    margin: auto;
+#singleItemViewDiv {
+    height: fit-content;
 }
 
-.shoes {
-    padding-top: 50%;
-    padding-bottom: 50%;
-    color: white;
-    cursor: pointer;
-    user-select: none;
-    text-align: center;
-    font-family: 'Raleway', sans-serif;
-    margin: auto;
-}
 
 
 

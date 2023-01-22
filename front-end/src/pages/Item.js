@@ -2,11 +2,6 @@ import { useEffect } from 'react'
 
 const Item = (props) => {
 
-  // useEffect(() => {
-  //   props.setViewingItem()
-  // }, [])
-
-
   return (
     <>
       <div id="itemDiv" onClick={() => {

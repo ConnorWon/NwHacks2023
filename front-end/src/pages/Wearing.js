@@ -1,6 +1,12 @@
 import "../styles/LoginStyle.css";
+import { useEffect } from 'react'
 
 const Wearing = (props) => {
+
+  useEffect(() => {
+
+  }, [props.item])
+
   return (
     <div>
       {props.item.top ? (

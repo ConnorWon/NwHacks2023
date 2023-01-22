@@ -6,10 +6,19 @@ const ViewingItem = (props) => {
 
     }, [props.item])
 
+    const type = props.item.clothing_type
+
     return (
         <>
-            <div>
+            <div id="singleItemViewDiv">
                 {props.item.name}
+                <div id="setOutfitDiv" onClick={() => {
+                    console.log(type)
+                    props.setWearingItem({...props.wearingItem, type:props.item})
+                    console.log(props.wearingItem)
+                }} >
+                    wear {props.item.clothing_type}
+                </div>
             </div>
         </>
     )
