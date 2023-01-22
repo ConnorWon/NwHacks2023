@@ -48,6 +48,10 @@ const Profile = () => {
     }
   };
 
+  const newState = (nextState) => {
+    setViewingItem(nextState)
+  }
+
   const addPopup = useRef();
 
   const handlePopUp = () => {
@@ -64,7 +68,7 @@ const Profile = () => {
       <div id="mainPanel">
         <div id="left" className="column">
           <div id="masterListDiv">
-            <MasterList allItems={allItems} setViewingItem={setViewingItem} />
+            <MasterList allItems={allItems} setViewingItem={newState} />
           </div>
           <div
             id="addingButtonDiv"
@@ -118,14 +122,9 @@ const Profile = () => {
                   const abc = await axios.post(backendURL + "create/", {
                     clothing: newVar,
                   });
-                  console.log(abc);
                   getAllItems();
                 }}
               ></button>
-              {/* <div className="fileGroup">
-                <label htmlFor="imageFile">Upload image:</label>
-                <input type="file" id="clothingFile" name="imageFile"></input>
-              </div> */}
             </form>
           </div>
         </div>

@@ -134,6 +134,7 @@
 
 #itemDiv {
     color: white;
+    user-select: none;
 }
 
 #itemDiv:hover {
@@ -141,6 +142,9 @@
     cursor: pointer;
 }
 
+#singleItemDiv {
+    color:white;
+}
 
 
 

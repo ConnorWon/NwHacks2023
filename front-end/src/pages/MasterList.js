@@ -2,7 +2,9 @@ import Item from "./Item";
 import { useEffect } from "react";
 
 const MasterList = (props) => {
-  // useEffect(() => {}, props.allItems);
+  useEffect(() => {
+
+  }, [props.allItems]);
 
   return (
     <>
@@ -10,7 +12,7 @@ const MasterList = (props) => {
         {props.allItems.data?.map((item) => {
           return (
             <>
-              <Item item={item} setViewingItem={props.setViewingItem} />
+              <Item item={item} setViewingItem={props.setViewingItem}/>
             </>
           );
         })}

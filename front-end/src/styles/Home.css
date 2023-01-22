@@ -17,6 +17,7 @@
     font-family: 'Roboto Mono', monospace;*/
     
     scroll-behavior: smooth;
+    color:white;
 }   
 
 html,body
@@ -171,5 +172,9 @@ header ul li a.active
     width: 30em;
 
     padding-bottom: 25px;
+}
+
+#singleItemDiv {
+    color:white;
 }
 
