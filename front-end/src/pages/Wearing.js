@@ -5,7 +5,7 @@ const Wearing = (props) => {
   useEffect(() => {}, [props.item]);
 
   return (
-    <div>
+    <div id="wearingDiv">
       {props.item.top ? (
         <h2 className="top">{"Top: " + props.item.top.name}</h2>
       ) : (
