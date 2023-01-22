@@ -1,14 +1,23 @@
 import React from "react"
 import "../styles/LoginStyle.css"
 import { useState } from 'react';
+import axios, { Axios } from 'axios'
 
 export default function Login() {
+    
+    const backendURL = "http://127.0.0.1:8000/"
 
     const [userVar, setUserVar] = useState()
     // todo: 
     // add welcome header
     // add user: element 
     // add box element that takes in the user input 
+
+    const handleLogin = async () => {
+        const info = await Axios.post(backendURL, userVar)
+
+        console.log(info)
+    }
 
 
     return (
@@ -24,6 +33,7 @@ export default function Login() {
                     }}></input>
                     <div id="loginButton" onClick={() => {
                         console.log(userVar)
+                        handleLogin()
                     }}>
                         Login
                     </div>
