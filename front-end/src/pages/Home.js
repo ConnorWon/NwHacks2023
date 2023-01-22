@@ -9,7 +9,8 @@ export default function Home() {
             <div className="div-intro">
                 <section>
                     <h1>Don't know what to wear?</h1>
-                    <h2>Hi All, 1) I have posted solutions to today's quiz, and solutions to all of the questions in quiz assignment 2) Please review the solutions to assignment 2.
+                    <h2>
+                        visit your closet any time, anywhere
                     </h2>
 
                     <button className="btn-slide">OPEN CLOSET</button>
