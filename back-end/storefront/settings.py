@@ -40,9 +40,9 @@ INSTALLED_APPS = [
     'django.contrib.staticfiles',
     'playground.apps.PlaygroundConfig',
     'django.contrib.sessions',
-    'debug_toolbar',
     'rest_framework',
     'corsheaders',
+    'debug_toolbar'
 ]
 
 MIDDLEWARE = [
