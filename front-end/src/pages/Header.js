@@ -1,11 +1,23 @@
-import { useEffect, useRef } from 'react'
+import { useEffect, useRef, useState } from 'react'
 
 
 const Header = () => {
 
     useEffect(() => {
         checkStorage()
-    })
+    }, [localStorageItem])
+
+    useEffect(() => {
+        var localStorageCookie = localStorage.getItem('info')
+        window.addEventListener('storage', () => {
+
+            // When local storage changes, dump the list to
+            // the console.
+            if (!localStorageCookie) return
+            setLocalItem({ item: localStorageCookie })
+        })
+    }, [])
+
 
     const headerSignout = useRef()
 
@@ -20,6 +32,10 @@ const Header = () => {
             }
         }
     }
+
+    const [localStorageItem, setLocalItem] = useState({
+        item: ""
+    })
 
     return (
         <>
