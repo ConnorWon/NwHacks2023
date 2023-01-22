@@ -21,6 +21,10 @@ export default function Login() {
     }
   };
 
+  const handleSignUp = async () => {
+    
+  }
+
   return (
     <>
       <div id="mainDiv">
@@ -42,6 +46,16 @@ export default function Login() {
             }}
           >
             Login
+          </div>
+
+          <div
+            id="signUpButton"
+            onClick={() => {
+              console.log(userVar);
+              handleSignUp(); 
+            }}
+          >
+            Sign up
           </div>
         </div>
       </div>

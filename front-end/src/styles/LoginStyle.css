@@ -23,20 +23,35 @@
     font-family: 'Raleway', sans-serif;
     margin: auto;
     justify-content: center;
+    
 }
 
 #username {
     margin: 0 auto;
     width: 100%;
+    
 }
 
 #loginButton {
     text-align: center;
-    width:100px;
+    width:90px;
     height: 30px;
     background-color: white;
     color: black;
     margin-top: 5%;
-    margin-left: 25%;
+    margin-right: 5%;
+    display: inline-block;
 
+}
+
+#signUpButton {
+    text-align: center;
+    width:90px;
+    height: 30px;
+    background-color: white;
+    color: black;
+    margin-top: 5%;
+    margin-left:15%;
+    display: inline-block;
+    
 }
