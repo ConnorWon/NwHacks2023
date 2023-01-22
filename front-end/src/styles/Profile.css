@@ -70,6 +70,7 @@
     justify-content: center;
     z-index: 9;
     display:none;
+    font-family: 'Raleway', sans-serif;
 }
 
 /* #mainDiv2::after {
@@ -86,8 +87,10 @@
     width: 40%;
     text-align: right;
     margin-top: 1%;
-    margin-bottom: 1%;;
+    margin-bottom: 1%;
+    
 }
+
 
 
 
