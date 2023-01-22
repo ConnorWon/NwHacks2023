@@ -23,6 +23,16 @@ from playground.models import User, Closet, Clothing
 #         user = User.objects.get(id=pk)
 #         return JsonResponse({'user': user})
 
+@api_view(['GET'])
+def masterlist(request):
+    data = request.data
+    closet = Closet.objects.get(user=data.user)
+    clothes = Clothing.objects.filter(closet=closet)
+    results = []
+    for clothing in clothes:
+        results.append(clothing.name)
+    return Response(results)
+
 
 @api_view(['POST'])
 def login(request):
