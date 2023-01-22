@@ -22,7 +22,7 @@ export default function Login() {
   };
 
   const handleSignUp = async () => {
-    
+    alert("hello!")
   }
 
   return (

@@ -3,6 +3,10 @@ import Header from "./Header"
 
 export default function Home() {
 
+    const toProfile = async () => {
+        window.location.href = "http://localhost:3000/profile";
+    };
+
     return (
         <>
             <Header />
@@ -13,7 +17,13 @@ export default function Home() {
                         visit your closet any time, anywhere
                     </h2>
 
-                    <button className="btn-slide">OPEN CLOSET</button>
+                    <button className="btn-slide"
+                            onClick={() => {
+                                toProfile();
+                            }}
+                        >
+                        OPEN CLOSET
+                    </button>
 
                 </section>
             </div>
