@@ -1,8 +1,10 @@
 import React from "react"
 import "../styles/LoginStyle.css"
+import { useState } from 'react';
 
 export default function Login() {
 
+    const [userVar, setUserVar] = useState()
     // todo: 
     // add welcome header
     // add user: element 
@@ -17,8 +19,12 @@ export default function Login() {
                 </div>
 
                 <div id="user">
-                    <input id="username" placeholder="Username"></input>
-                    <div id="loginButton">
+                    <input id="username" placeholder="Username" onChange={(e) => {
+                        setUserVar(e.target.value)
+                    }}></input>
+                    <div id="loginButton" onClick={() => {
+                        console.log(userVar)
+                    }}>
                         Login
                     </div>
                 </div>
