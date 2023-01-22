@@ -38,12 +38,12 @@ INSTALLED_APPS = [
     'django.contrib.contenttypes',
     'django.contrib.messages',
     'django.contrib.staticfiles',
-    'playground',
+    'playground.apps.PlaygroundConfig',
+    'django.contrib.sessions',
     'debug_toolbar',
+    'rest_framework',
     'corsheaders',
 ]
-
-SITE_ID = 1
 
 MIDDLEWARE = [
     'corsheaders.middleware.CorsMiddleware',
