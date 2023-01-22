@@ -143,6 +143,7 @@ header ul li a.active
 .btn-slide:hover
 {
     box-shadow: inset 9em 0 0 0 rgb(170, 207, 255);
+    cursor: pointer;
 }
 
 .div-intro h1 
