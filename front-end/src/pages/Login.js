@@ -15,15 +15,28 @@ export default function Login() {
 
     const info = await axios.post(backendURL + "login/", data);
 
-    if (info) {
+    if (info.data.key) {
       localStorage.setItem("item", userVar);
+      localStorage.setItem("key", info.data.pk);
       window.location.href = "http://localhost:3000/profile";
     }
   };
 
   const handleSignUp = async () => {
-    alert("hello!")
-  }
+    const data = {
+      username: userVar,
+    };
+
+    console.log(userVar);
+    const info = await axios.post(backendURL + "signup/", data);
+    console.log(info.data.pk);
+
+    if (info.data.key) {
+      localStorage.setItem("item", userVar);
+      localStorage.setItem("key", info.data.pk);
+      window.location.href = "http://localhost:3000/profile";
+    }
+  };
 
   return (
     <>
@@ -52,7 +65,7 @@ export default function Login() {
             id="signUpButton"
             onClick={() => {
               console.log(userVar);
-              handleSignUp(); 
+              handleSignUp();
             }}
           >
             Sign up

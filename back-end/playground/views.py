@@ -1,28 +1,12 @@
-from django.contrib.auth.mixins import LoginRequiredMixin
-from django.views import View
-from django.shortcuts import render, get_object_or_404, redirect
 from playground.models import User
-from django.http import JsonResponse, HttpResponse
 from rest_framework.response import Response
 from rest_framework.decorators import api_view
-from rest_framework import status
-from playground.modelSerializers.serializers import UserSerializer, ClothingSerializer, ClosetSerializer
+from playground.modelSerializers.serializers import ClothingSerializer
 from playground.models import User, Closet, Clothing
-import json
 
 # File Description
 # is a request handler
 
-
-# class Home(View):
-#     def get(self, request):
-#         return render(request, 'hello.html')
-
-
-# class Profile(View):
-#     def get(self, request, pk):
-#         user = User.objects.get(id=pk)
-#         return JsonResponse({'user': user})
 @api_view(['POST'])
 def create_clothing(request):
     data = request.data["clothing"]
@@ -49,6 +33,29 @@ def masterlist(request):
     # sent.append(results)
     return Response(results)
 
+@api_view(['POST'])
+def signup(request):
+    data = request.data["username"]
+    print(data)
+    try:
+        obj = User.objects.get(username__icontains=data)
+        if (obj):
+            return Response(False)
+        else:
+            user = User(username=data)
+            closet = Closet(name="My Closet", user=user)
+            user.save()
+            closet.save()
+            num = closet.pk
+            return Response({'key': True, 'pk': num })
+    except:
+        user = User(username=data)
+        closet = Closet(name="My Closet", user=user)
+        user.save()
+        closet.save()
+        num = closet.pk
+        print(num)
+        return Response({'key': True, 'pk': num})
 
 @api_view(['POST'])
 def login(request):
