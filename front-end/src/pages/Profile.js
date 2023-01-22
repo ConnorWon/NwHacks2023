@@ -128,7 +128,7 @@ const Profile = () => {
               <button
                 id="submitButton"
                 onClick={async () => {
-                  const abc = await axios.post(backendURL + "create/", {
+                  await axios.post(backendURL + "create/", {
                     clothing: newVar,
                   });
                   getAllItems();
