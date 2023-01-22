@@ -173,5 +173,8 @@ header ul li a.active
     padding-bottom: 25px;
 }
 
+#headerSignout {
+    display:none;
+}
 
 
