@@ -1,7 +1,10 @@
-const Item = () => {
+const Item = (props) => {
 
     return (
         <>
+            <div id="itemDiv">
+                {/* information about the item */}
+            </div>
         </>
     )
 }

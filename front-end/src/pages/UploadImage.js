@@ -4,17 +4,9 @@ import "../styles/UploadImage.css";
 
 export default function UploadImage() {
     
-
-
-
-
     return (
         <>
         <div id="mainDiv2">
-
-            
-         
-
             <form>
                 <div className="nameGroup">
                     <label htmlFor="name">Name:</label>
@@ -37,15 +29,7 @@ export default function UploadImage() {
                     <input type="file" id="clothingFile" name="imageFile"></input>
 
                 </div>
-                
-                
-                
-
-                
-            
             </form>
-
-        
         </div>
     
 
