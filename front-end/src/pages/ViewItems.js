@@ -16,6 +16,7 @@ const ViewingItem = (props) => {
             console.log(props.wearing);
             if (type === "top") {
               props.setWearingItem({ ...props.wearing, top: props.item });
+              console.log(type)
             } else if (type === "bottom") {
               props.setWearingItem({ ...props.wearing, bottom: props.item });
             } else if (type === "shoes") {

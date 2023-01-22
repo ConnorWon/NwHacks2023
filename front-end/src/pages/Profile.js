@@ -115,6 +115,7 @@ const Profile = () => {
                     setNewVar({ ...newVar, clothing_type: e.target.value });
                   }}
                 >
+                    <option value="">--Choose--</option>
                   <option value="top">Top</option>
                   <option value="bottom">Bottom</option>
                   <option value="shoes">Shoes</option>
