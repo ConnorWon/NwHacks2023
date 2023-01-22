@@ -43,12 +43,14 @@
     margin-right: 5%;
     display: inline-block;
     border-radius: 5px;
+    user-select: none;
 
 }
 
 #loginButton:hover {
     background: rgb(0, 110, 255);
     color: #ffffff;
+    cursor: pointer;
 
 }
 
@@ -62,10 +64,12 @@
     margin-left:15%;
     display: inline-block;
     border-radius: 5px;
+    user-select: none;
     
 }
 
 #signUpButton:hover {
     background: rgb(0, 110, 255);
     color: #ffffff;
+    cursor: pointer;
 }
