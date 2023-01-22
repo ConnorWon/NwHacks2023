@@ -63,8 +63,10 @@ def login(request):
         data = request.data["username"]
         print(data)
         obj = User.objects.get(username__icontains=data)
+        closet = Closet.objects.get(user=obj)
+        num = closet.pk
         if (obj):
-            return Response(True)
+            return Response({'key': True, 'pk': num})
         else:
             return Response(False)
     # except:

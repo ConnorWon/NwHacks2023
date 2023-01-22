@@ -3,6 +3,11 @@ import { useEffect, useRef, useState } from 'react'
 
 const Header = () => {
 
+    const [localStorageItem, setLocalItem] = useState({
+        item: ""
+    })
+
+
     useEffect(() => {
         checkStorage()
     }, [localStorageItem])
@@ -33,10 +38,6 @@ const Header = () => {
         }
     }
 
-    const [localStorageItem, setLocalItem] = useState({
-        item: ""
-    })
-
     return (
         <>
             <header>
@@ -46,6 +47,7 @@ const Header = () => {
                     <li><a href="/profile"> Profile </a></li>
                     <li><a ref={headerSignout} href="/profile" id="headerSignout" onClick={() => {
                         localStorage.removeItem("item")
+                        localStorage.removeItem("key")
                     }}> Signout </a></li>
                 </ul>
             </header>
