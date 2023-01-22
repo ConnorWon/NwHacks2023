@@ -28,6 +28,7 @@
 #right {
     border-top-right-radius: 10px;
     border-bottom-right-radius: 10px;
+    justify-content: center;
 }
 
 #left, #middle {
@@ -146,7 +147,38 @@
     color:white;
 }
 
+.top {
+    padding-top: 50%;
+    padding-bottom: 50%;
+    color: white;
+    cursor: pointer;
+    user-select: none;
+    text-align: center;
+    font-family: 'Raleway', sans-serif;
+    margin: auto;
+}
 
+.bottom {
+    padding-top: 50%;
+    padding-bottom: 50%;
+    color: white;
+    cursor: pointer;
+    user-select: none;
+    text-align: center;
+    font-family: 'Raleway', sans-serif;
+    margin: auto;
+}
+
+.shoes {
+    padding-top: 50%;
+    padding-bottom: 50%;
+    color: white;
+    cursor: pointer;
+    user-select: none;
+    text-align: center;
+    font-family: 'Raleway', sans-serif;
+    margin: auto;
+}
 
 
 

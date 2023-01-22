@@ -10,6 +10,11 @@ const Profile = () => {
   const backendURL = "http://127.0.0.1:8000/";
   const [allItems, setAllItems] = useState([]);
   const [viewingItem, setViewingItem] = useState({});
+  const [wearingItem, setWearingItem] = useState({
+    top: "",
+    bottom: "",
+    shoes: "",
+  });
   const [newVar, setNewVar] = useState({
     name: "",
     color: "",
@@ -132,7 +137,7 @@ const Profile = () => {
           <ViewItem item={viewingItem} />
         </div>
         <div id="right" className="column">
-          <Wearing />
+          <Wearing item={wearingItem} setWearingItem={setWearingItem} />
         </div>
       </div>
     </>
