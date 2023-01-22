@@ -1,24 +1,22 @@
-import Item from "./Item"
-
+import Item from "./Item";
+import { useEffect } from "react";
 
 const MasterList = (props) => {
-    return (
-        <>
-          <div>
-              {/* {props.allItems.map((item) => {
-                return (
-                  <>
-                    <Item item={item} setViewingItem={props.setViewingItem} />
-                  </>
-                )
-              })} */}
+  // useEffect(() => {}, props.allItems);
 
-              {
-                console.log(props.allItems)
-              }
-          </div>
-        </>
-    )
-}
+  return (
+    <>
+      <div>
+        {props.allItems.data?.map((item) => {
+          return (
+            <>
+              <Item item={item} setViewingItem={props.setViewingItem} />
+            </>
+          );
+        })}
+      </div>
+    </>
+  );
+};
 
-export default MasterList
+export default MasterList;

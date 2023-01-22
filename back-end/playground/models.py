@@ -16,5 +16,4 @@ class Clothing(models.Model):
     name = models.CharField(max_length=30)
     color = models.CharField(max_length=30)
     clothing_type = models.CharField(max_length=30)
-    img = models.ImageField()
     closet = models.ForeignKey('Closet', on_delete=models.CASCADE)

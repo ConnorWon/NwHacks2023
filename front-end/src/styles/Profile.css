@@ -127,6 +127,20 @@
 }
 
 
+#submitButton {
+    width: 10%;
+    height: 10%;
+}
+
+#itemDiv {
+    color: white;
+}
+
+#itemDiv:hover {
+    background-color: #01001c;
+    cursor: pointer;
+}
+
 
 
 

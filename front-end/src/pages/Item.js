@@ -1,12 +1,18 @@
 const Item = (props) => {
+  return (
+    <>
+      <div id="itemDiv">
+        <p>
+          {props.item.name +
+            " " +
+            props.item.color +
+            "      " +
+            "type: " +
+            props.item.clothing_type}
+        </p>
+      </div>
+    </>
+  );
+};
 
-    return (
-        <>
-            <div id="itemDiv">
-                {/* information about the item */}
-            </div>
-        </>
-    )
-}
-
-export default Item
+export default Item;
