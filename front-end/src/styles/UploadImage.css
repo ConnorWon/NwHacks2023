@@ -1,5 +1,5 @@
 #mainDiv2 {
-    width: 40%;
+    width: fit-content;
     margin: auto;
     background-color: white;
     justify-content: center;
@@ -11,9 +11,9 @@
     width: 40%;
     text-align: right;
     margin-top: 1%;
-    margin-bottom: 1%;;
+    margin-bottom: 1%;
+    ;
 }
-
 
 
 #clothingName {
@@ -29,7 +29,7 @@
     width: 30%;
     display: inline-block;
     margin-left: 2%;
-  
+    width: 40%
 }
 
 #clothingColor {
@@ -38,7 +38,7 @@
     width: 10%;
     display: inline-block;
     margin-left: 2%;
-   
+    width: 30%;
 }
 
 #clothingFile {
@@ -47,12 +47,3 @@
     display: inline-block;
     margin-left: 2%;
 }
-
-
-
-
-
-
-
-
-

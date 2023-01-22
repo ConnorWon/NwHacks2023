@@ -3,7 +3,7 @@ import Header from "./Header"
 import MasterList from "./MasterList"
 import ViewItem from "./ViewItems"
 import Wearing from "./Wearing"
-import { useEffect, useState } from 'react'
+import { useEffect, useState, useRef } from 'react'
 import axios, * as others from "axios";
 
 const Profile = () => {
@@ -14,7 +14,7 @@ const Profile = () => {
     useEffect(() => {
 
         verifyStorage()
-        
+
         // Axios request to get all items from 1 person
         setAllItems()
     }, [])
@@ -31,6 +31,15 @@ const Profile = () => {
         }
     }
 
+    const addPopup = useRef();
+
+    const handlePopUp = () => {
+        if (addPopup.current.style.display === "block") {
+            addPopup.current.style.display = "none"
+        } else {
+            addPopup.current.style.display = "block"
+        }
+    }
 
     return (
         <>
@@ -38,44 +47,43 @@ const Profile = () => {
             <div id="mainPanel">
                 <div id="left" className="column">
                     <div id="masterListDiv">
-                        <MasterList allItems={allItems} setViewingItem={setViewingItem}/>
+                        <MasterList allItems={allItems} setViewingItem={setViewingItem} />
                     </div>
                     <div id="addingButtonDiv" onClick={() => {
                         handlePopUp();
                     }}>
-                <div>Add Clothing</div>
+                        Add Clothing
+                    </div>
                     <div ref={addPopup} id="mainDiv2">
 
-                        <form>
-                            <div className="nameGroup">
-                                <label htmlFor="name">Name:</label>
-                                <input type="text" placeholder="Name" id="clothingName"></input>
-                            </div>
+                            <form>
+                                <div className="nameGroup">
+                                    <label htmlFor="name">Name:</label>
+                                    <input type="text" placeholder="Name" id="clothingName"></input>
+                                </div>
 
-                            <div className="typeGroup">
-                                <label htmlFor="type">Type:</label>
-                                <input type="text" placeholder="Type: Top, Bottom, Shoes" id="clothingType"></input>
+                                <div className="typeGroup">
+                                    <label htmlFor="type">Type:</label>
+                                    <input type="text" placeholder="Top, Bottom, Shoes" id="clothingType"></input>
+                                </div>
 
-                            </div>
+                                <div className="colorGroup">
+                                    <label htmlFor="color">Color:</label>
+                                    <input type="text" placeholder="Color" id="clothingColor"></input>
+                                </div>
 
-                            <div className="colorGroup">
-                                <label htmlFor="color">Color:</label>
-                                <input type="text" placeholder="Color" id="clothingColor"></input>
-                            </div>
+                                <div className="fileGroup">
+                                    <label htmlFor="imageFile">Upload image:</label>
+                                    <input type="file" id="clothingFile" name="imageFile"></input>
 
-                            <div className="fileGroup">
-                                <label htmlFor="imageFile">Upload image:</label>
-                                <input type="file" id="clothingFile" name="imageFile"></input>
+                                </div>
 
-                            </div>
-                    
-                        </form>
+                            </form>
 
-                    </div>
-                    </div>
+                        </div>
                 </div>
                 <div id="middle" className="column">
-                    <ViewItem item={viewingItem}/>
+                    <ViewItem item={viewingItem} />
                 </div>
                 <div id="right" className="column">
                     <Wearing />
@@ -83,7 +91,7 @@ const Profile = () => {
             </div>
 
 
-            
+
         </>
     )
 }
