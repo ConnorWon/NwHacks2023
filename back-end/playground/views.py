@@ -27,6 +27,6 @@ class Login(View):
         data = request.GET
         try:
             User.objects.get(user__icontains=data)
-            return JsonResponse({'result': "True"})
+            return JsonResponse({'result': True})
         except:
             return JsonResponse({'result': False})
