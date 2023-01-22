@@ -41,6 +41,13 @@
     margin-top: 5%;
     margin-right: 5%;
     display: inline-block;
+    border-radius: 5px;
+
+}
+
+#loginButton:hover {
+    background: rgb(0, 110, 255);
+    color: #ffffff;
 
 }
 
@@ -53,5 +60,11 @@
     margin-top: 5%;
     margin-left:15%;
     display: inline-block;
+    border-radius: 5px;
     
+}
+
+#signUpButton:hover {
+    background: rgb(0, 110, 255);
+    color: #ffffff;
 }
